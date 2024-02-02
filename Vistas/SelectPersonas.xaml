@@ -9,6 +9,7 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        <!-----Esta es una prueba-->
         <CollectionView ItemsSource="{Binding Items}"
                 SelectionMode="Single">
             <CollectionView.ItemTemplate> <!---¿Que hace esto?-->
