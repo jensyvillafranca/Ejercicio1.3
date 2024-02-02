@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1._3.Vistas.ViewPersona"
+             Title="ViewPersona">
+    <StackLayout>
+        <Grid>
+            <!--Definiendo la cantidad de filas que vamos a necesitar en la interfaz-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Utilizo un grid para poder superponer un boxview encima de otro-->
+            <StackLayout BackgroundColor="{StaticResource VerdePersonalizado}" HeightRequest="720" Grid.Row="1">
+                <!--Nombres-->
+                <Label TextColor="Black" Text="Nombres:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,100,0,0"/>
+                <Entry x:Name="txtViewNombres" HorizontalOptions="Center" TextColor="White" Text="{Binding nombresPersona}" IsEnabled="False"/>
+
+                <!--Apellidos-->
+                <Label TextColor="Black" Text="Apellidos:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtViewApellidos" HorizontalOptions="Center" TextColor="White" Text="{Binding apellidosPersona}" IsEnabled="False"/>
+
+                <!--Edad-->
+                <Label TextColor="Black" Text="Edad:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtViewEdad" HorizontalOptions="Center" TextColor="White" Text="{Binding edadPersona}" IsEnabled="False"/>
+
+                <!--Correo-->
+                <Label TextColor="Black" Text="Correo Electrónico:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtViewCorreo" HorizontalOptions="Center" TextColor="White" Text="{Binding correo}" IsEnabled="False"/>
+
+                <!--Dirección-->
+                <Label TextColor="Black" Text="Dirección: " FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtViewDireccion" HorizontalOptions="Center" TextColor="White" Text="{Binding direccionPersona}" IsEnabled="False"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1._3.Vistas.FormularioRegistro">
+    <StackLayout>
+        <Grid>
+            <!--Definiendo la cantidad de filas que vamos a necesitar en la interfaz-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Utilizo un grid para poder superponer un boxview encima de otro-->
+            <StackLayout BackgroundColor="{StaticResource VerdePersonalizado}" HeightRequest="720" Grid.Row="1">
+                <!--Nombres-->
+                <Label TextColor="Black" Text="1. Ingrese sus nombres:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,5,0,0"/>
+                <Entry x:Name="txtNombres" Placeholder="Ejemplo: Jensy Lorena" Keyboard="Text" HorizontalOptions="Center" TextColor="White" MaxLength="50"/>
+
+                <!--Apellidos-->
+                <Label TextColor="Black" Text="2. Ingrese sus apellidos:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtApellidos" Placeholder="Ejemplo: Villafranca Navarro" Keyboard="Text" HorizontalOptions="Center" TextColor="White" MaxLength="50"/>
+
+                <!--Edad-->
+                <Label TextColor="Black" Text="3. Ingrese su edad:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtEdad" Placeholder="Ejemplo: 25" Keyboard="Numeric" HorizontalOptions="Center" TextColor="White" MaxLength="3"/>
+
+                <!--Correo-->
+                <Label TextColor="Black" Text="4. Ingrese su correo electrónico:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtCorreo" Placeholder="Ejemplo: prueba@gmail.com" Keyboard="Email" HorizontalOptions="Center" TextColor="White" MaxLength="50"/>
+
+                <!--Dirección-->
+                <Label TextColor="Black" Text="5. Ingrese su dirección: " FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtDireccion" Placeholder="Ejemplo: Choloma Cortés" Keyboard="Email" HorizontalOptions="Center" TextColor="White" MaxLength="100"/>
+
+                <!--Botones de guardar y ver info-->
+                <Button TextColor="White" Text="Guardar" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="210" Margin="15" Clicked="guardarDatos"></Button>
+                <Button TextColor="White" Text="Ver Elementos" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="210" Margin="15" Clicked="mostrarDatos"></Button>
+
+            </StackLayout>
+
+            <StackLayout BackgroundColor="{StaticResource GrisPersonalizado}" HeightRequest="170" VerticalOptions="Start" >
+                <Image Source="logo.png" WidthRequest="230"/>
+                <Label TextColor="Black" Text="¡Bienvenidos!" CharacterSpacing="4" FontAttributes="Bold" FontSize="20" HorizontalOptions="Center" VerticalOptions="EndAndExpand"/>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>

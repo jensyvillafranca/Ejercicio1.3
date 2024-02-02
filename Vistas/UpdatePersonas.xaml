@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Ejercicio1._3.Vistas.UpdatePersonas"
+             Title="UpdatePersonas">
+    <StackLayout>
+        <Grid>
+            <!--Definiendo la cantidad de filas que vamos a necesitar en la interfaz-->
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <!--Utilizo un grid para poder superponer un boxview encima de otro-->
+            <StackLayout BackgroundColor="{StaticResource VerdePersonalizado}" HeightRequest="720" Grid.Row="1">
+                <!--Oculto-->
+                <Entry x:Name="txtUpOculto" Text="{Binding idPersona}" IsVisible="false"/>
+                
+                <!--Nombres-->
+                <Label TextColor="Black" Text="1.Nombres:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,100,0,0"/>
+                <Entry x:Name="txtUpNombres" Placeholder="Ejemplo: Jensy Lorena" Keyboard="Text" HorizontalOptions="Center" TextColor="White" MaxLength="50" Text="{Binding nombresPersona}"/>
+
+                <!--Apellidos-->
+                <Label TextColor="Black" Text="2.Apellidos:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtUpApellidos" Placeholder="Ejemplo: Villafranca Navarro" Keyboard="Text" HorizontalOptions="Center" TextColor="White" MaxLength="50" Text="{Binding apellidosPersona}"/>
+
+                <!--Edad-->
+                <Label TextColor="Black" Text="3.Edad:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtUpEdad" Placeholder="Ejemplo: 25" Keyboard="Numeric" HorizontalOptions="Center" TextColor="White" MaxLength="3" Text="{Binding edadPersona}"/>
+
+                <!--Correo-->
+                <Label TextColor="Black" Text="4.Correo Electrónico:" FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtUpCorreo" Placeholder="Ejemplo: prueba@gmail.com" Keyboard="Email" HorizontalOptions="Center" TextColor="White" MaxLength="50" Text="{Binding correo}"/>
+
+                <!--Dirección-->
+                <Label TextColor="Black" Text="5.Dirección: " FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" Margin="0,10,0,0"/>
+                <Entry x:Name="txtUpDireccion" Placeholder="Ejemplo: Choloma Cortés" Keyboard="Email" HorizontalOptions="Center" TextColor="White" MaxLength="100" Text="{Binding direccionPersona}"/>
+
+                <!--Botones de guardar y ver info-->
+                <Button TextColor="White" Text="Actualizar" BackgroundColor="Black" HorizontalOptions="Center" WidthRequest="210" Margin="15" Clicked="actualizar"></Button>
+            </StackLayout>
+        </Grid>
+    </StackLayout>
+</ContentPage>
